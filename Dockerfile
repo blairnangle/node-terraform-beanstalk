@@ -19,7 +19,7 @@ ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
 # Install specific version of Node
-RUN curl https://deb.nodesource.com/setup_12.x
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -y nodejs
 
 # Install specific version of python3-pip
