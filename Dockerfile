@@ -12,6 +12,10 @@ RUN apt-get update && apt-get install -y curl
 RUN apt-get update && apt-get install -y wget
 RUN apt-get update && apt-get install -y unzip
 
+# Install Git
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata
+RUN apt-get update && apt-get install -y git-all
+
 # Install UTF-8 encoding
 RUN apt-get update --fix-missing && apt-get install -y locales
 RUN locale-gen en_US.UTF-8
