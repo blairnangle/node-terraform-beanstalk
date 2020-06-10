@@ -41,4 +41,4 @@ RUN ./aws/install
 RUN rm awscliv2.zip
 
 # Install latest version of Elastic Beanstalk CLI
-RUN pip3 install --upgrade --user awsebcli
+RUN pip3 install awsebcli --force-reinstall --upgrade
