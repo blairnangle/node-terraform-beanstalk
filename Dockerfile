@@ -33,7 +33,7 @@ RUN apt-get install -y python3-pip
 RUN pip3 install -Iv checkov==1.0.302
 
 # Install specific version of Terraform
-ENV TERRAFORM_VERSION=0.12.28
+ENV TERRAFORM_VERSION=0.13.4
 RUN wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 RUN unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/local/bin/
 RUN rm terraform_${TERRAFORM_VERSION}_linux_amd64.zip
